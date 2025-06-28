@@ -35,20 +35,11 @@
       // Odtwórz dźwięk
       document.getElementById("dzwiek").play();
 
-      // Otwórz parę losowych stron (np. memy)
-      const urls = [
-        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      ];
-      for (let i = 0; i < 3; i++) {
-        const win = window.open(urls[Math.floor(Math.random() * urls.length)], '_blank');
-        if (win) win.blur();
-      }
-
-      // Migający tekst
+      // Migający tekst co 3 sekundy
       setInterval(() => {
         document.body.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
         document.getElementById("naglowek").innerText = "NIE MA DARMOWYCH ITEMÓW FRAJERZE!";
-      }, 1000);
+      }, 3000);
     }
   </script>
 </body>
