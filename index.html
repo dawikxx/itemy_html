@@ -28,7 +28,7 @@
   <button onclick="prank()">✅ TAK</button>
   <button onclick="alert('Brawo, masz rozum!')">❌ NIE</button>
 
-  <audio id="dzwiek" src="https://www.myinstants.com/media/sounds/vine-boom.mp3" preload="auto"></audio>
+  <audio id="dzwiek" src="https://www.myinstants.com/media/sounds/screamer.mp3" preload="auto"></audio>
 
   <script>
     function prank() {
@@ -37,9 +37,7 @@
 
       // Otwórz parę losowych stron (np. memy)
       const urls = [
-        "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "https://ptoszek.pl/",
-        "https://nekos.best/api/v2/cry"
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
       ];
       for (let i = 0; i < 3; i++) {
         const win = window.open(urls[Math.floor(Math.random() * urls.length)], '_blank');
