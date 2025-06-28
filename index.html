@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Darmowe itemy</title>
+  <style>
+    body {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      font-family: 'Comic Sans MS', sans-serif;
+      margin-top: 100px;
+    }
+    button {
+      font-size: 30px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #naglowek {
+      font-size: 36px;
+    }
+  </style>
+</head>
+<body>
+  <div id="naglowek">Czy chcesz darmowe itemy?</div>
+  <br>
+  <button onclick="prank()">✅ TAK</button>
+  <button onclick="alert('Brawo, masz rozum!')">❌ NIE</button>
+
+  <audio id="dzwiek" src="https://www.myinstants.com/media/sounds/vine-boom.mp3" preload="auto"></audio>
+
+  <script>
+    function prank() {
+      // Odtwórz dźwięk
+      document.getElementById("dzwiek").play();
+
+      // Otwórz parę losowych stron (np. memy)
+      const urls = [
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "https://ptoszek.pl/",
+        "https://nekos.best/api/v2/cry"
+      ];
+      for (let i = 0; i < 3; i++) {
+        const win = window.open(urls[Math.floor(Math.random() * urls.length)], '_blank');
+        if (win) win.blur();
+      }
+
+      // Migający tekst
+      setInterval(() => {
+        document.body.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+        document.getElementById("naglowek").innerText = "NIE MA DARMOWYCH ITEMÓW FRAJERZE!";
+      }, 300);
+    }
+  </script>
+</body>
+</html>
